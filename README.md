@@ -14,7 +14,7 @@ Following are the SQL Command
 
 DDL could be used to define the database schema.
 
-## Lets start from each constraint "CREATE TABLE":
+## How do we CREATE TABLE using SQL command?
 
 * UNIQUE -  The UNIQUE constraint ensures that all values in a column are different.
 * NOT NULL - The NOT NULL constraint enforces a column to NOT accept NULL values.
@@ -43,3 +43,5 @@ CREATE TABLE STUDENTS (
 );
 ```
 `Commands completed successfully.`
+
+## How do we ALTER TABLE using SQL command?
