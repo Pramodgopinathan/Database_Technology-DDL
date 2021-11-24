@@ -80,6 +80,6 @@ ALTER TABLE STUDENTS
 ADD CONSTRAINT PK_dept_name PRIMARY KEY (dept_name); 
 
 ALTER TABLE STUDENTS
-DROP CONSTRAINT PK_dept_nam;
+DROP CONSTRAINT PK_dept_name;
 ```
 ## How do we TRUNCATE TABLE using SQL command?
