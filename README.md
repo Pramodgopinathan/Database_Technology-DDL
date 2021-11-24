@@ -82,4 +82,10 @@ ADD CONSTRAINT PK_dept_name PRIMARY KEY (dept_name);
 ALTER TABLE STUDENTS
 DROP CONSTRAINT PK_dept_name;
 ```
-## How do we TRUNCATE TABLE using SQL command?
+## How do we TRUNCATE/DROP TABLE using SQL command?
+```sql
+TRUNCATE TABLE STUDENTS;
+DROP TABLE STUDENTS;
+```
+Note: The TRUNCATE TABLE command deletes the data inside a table, but not the table itself.
+The DROP TABLE command deletes a table in the database.
