@@ -42,6 +42,26 @@ CREATE TABLE STUDENTS (
 	FOREIGN KEY(dept_name) REFERENCES dbo.DEPARTMENTS(dept_name)
 );
 ```
-`Commands completed successfully.`
-
 ## How do we ALTER TABLE using SQL command?
+### * First Lets ADD column called date of birth for students, before adding lets check the column description using below select command
+
+```sql
+SELECT *
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE table_name = 'STUDENTS'
+```
+![](https://github.com/Pramodgopinathan/Database_Technology-DDL/blob/43a1482d91cd39da19eebb5d562efadece1c0747/INFORMATION_SCHEMA.COLUMNS.PNG)
+
+```sql
+ALTER TABLE STUDENTS
+ADD DateOfBirth date;
+```
+![](https://github.com/Pramodgopinathan/Database_Technology-DDL/blob/a3a8c4527fd5c0a60af730da0476e8df04a1a9f9/ADD%20COLUMN.PNG)
+
+ same way we could use drop, rename, add constraints and drop constraints
+### SQL command to drop DateofBirth column 
+
+```sql
+ALTER TABLE STUDENTS
+DROP COLUMN DateOfBirth;
+```
