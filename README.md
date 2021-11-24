@@ -89,3 +89,15 @@ DROP TABLE STUDENTS;
 ```
 Note: The TRUNCATE TABLE command deletes the data inside a table, but not the table itself.
 The DROP TABLE command deletes a table in the database.
+
+## How do we Create View TABLE using SQL command?
+A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.
+Here we are creating view of students > 30 
+
+```sql
+CREATE VIEW STUDENTGREATER30 AS
+SELECT *
+FROM STUDENTS
+WHERE student_age > 30;
+```
+
