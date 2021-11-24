@@ -14,15 +14,32 @@ Following are the SQL Command
 
 DDL could be used to define the database schema.
 
+## Lets start from each constraint "CREATE TABLE":
+
+* UNIQUE -  The UNIQUE constraint ensures that all values in a column are different.
+* NOT NULL - The NOT NULL constraint enforces a column to NOT accept NULL values.
+* PRIMARY KEY - The PRIMARY KEY constraint uniquely identifies each record in a table.
+* CHECK - The CHECK constraint is used to limit the value range that can be placed in a column.
+* DEFAULT - The DEFAULT constraint is used to set a default value for a column.
+* FOREIGN KEY - The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.
+
 ```sql
+CREATE TABLE DEPARTMENTS (
+	dept_name INT NOT NULL PRIMARY KEY,
+	dept_building INT NOT NULL,
+	dept_budget INT,	
+);
 CREATE TABLE STUDENTS (
-	dept_name INT NOT NULL, /*Give null values*/
-	student_id INT NOT NULL, 
-	student_name varchar(50),
+	dept_name INT NOT NULL, 
+	student_id INT NOT NULL UNIQUE, 
+	student_name varchar(255),
 	student_total_credit INT, 
 	student_enronment_date DATE DEFAULT GETDATE(),
-	student_city varchar(50),
-	student_age INT CHECK (student_age>= 21 AND student_city= 'Bangalore'),
-	PRIMARY KEY (student_id)
+	student_city varchar(255),
+	student_age INT,
+	CHECK (student_age>= 21 AND student_city= 'Bangalore'),
+	PRIMARY KEY (student_id),
+	FOREIGN KEY(dept_name) REFERENCES dbo.DEPARTMENTS(dept_name)
 );
 ```
+`Commands completed successfully.`
