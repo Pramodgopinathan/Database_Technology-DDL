@@ -14,7 +14,7 @@ Following are the SQL Command
 
 DDL could be used to define the database schema.
 
-```
+```sql:
 CREATE TABLE STUDENTS (
 	dept_name INT NOT NULL, /*Give null values*/
 	student_id INT NOT NULL, 
