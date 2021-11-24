@@ -65,3 +65,21 @@ ADD DateOfBirth date;
 ALTER TABLE STUDENTS
 DROP COLUMN DateOfBirth;
 ```
+### SQL command to rename enronment to enrollment column 
+
+```sql
+sp_rename 'STUDENTS.[student_enronment_date]', 'student_enrollment_date','COLUMN';
+
+```
+Note: We cant use ALTER for renaming rather we have to use Transact-SQL
+
+### SQL command to ADD or DROP Constraints
+
+```sql
+ALTER TABLE STUDENTS
+ADD CONSTRAINT PK_dept_name PRIMARY KEY (dept_name); 
+
+ALTER TABLE STUDENTS
+DROP CONSTRAINT PK_dept_nam;
+```
+## How do we TRUNCATE TABLE using SQL command?
